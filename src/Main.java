@@ -7,7 +7,7 @@ public class Main {
         Les2.ex2(a);
         System.out.println(Arrays.toString(a));
         System.out.println(Les2.ex1(10));
-
+        System.out.println(Les2.ex3(2,4));
 
     }
 
@@ -34,6 +34,15 @@ public class Main {
                         arr[j + 1] = tmp;
                     }
                 }
+            }
+        }
+
+
+        public static int ex3(int x, int n) {
+            if (n==0) {
+                return 1;
+            } else {
+                return ex3(x, n-1)*x;
             }
         }
 
