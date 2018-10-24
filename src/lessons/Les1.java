@@ -22,6 +22,18 @@ public class Les1 {
         }
     }
 
+    public static int ex3(int[] a, int l, int r) {
+        if (l == r-1) {
+            return a[l];
+        }
+        int max1 = ex3(a, l, (l+r)/2);
+        int max2 = ex3(a, (l+r)/2, r);
+        if (max1>max2) {
+            return max1;
+        } else {
+            return max2;
+        }
 
+    }
 
 }
