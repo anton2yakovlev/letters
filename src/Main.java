@@ -4,10 +4,12 @@ public class Main {
     public static void main(String[] args) {
 
         int[] a = {2,1,3,6,8,2};
+        int[][] a2 = {{1,0,2},{0,0,4},{5,7,3}};
         Les2.ex2(a);
         System.out.println(Arrays.toString(a));
         System.out.println(Les2.ex1(10));
         System.out.println(Les2.ex3(2,4));
+        System.out.println(Les2.ex4(a2));
 
     }
 
@@ -44,6 +46,32 @@ public class Main {
             } else {
                 return ex3(x, n-1)*x;
             }
+        }
+
+        public static int ex4(int[][] a) {
+            int max = 0;
+            for (int[] i:a){
+                int k = 0;
+                int k_max = 0;
+                for (int j: i) {
+                    if (j==0){
+                        k++;
+                    } else {
+                        if (k>k_max){
+                            k_max = k;
+                        }
+                        k = 0;
+                    }
+                }
+                if (k>k_max){
+                    k_max = k;
+                }
+                if (k_max>max) {
+                    max = k_max;
+                }
+            }
+
+            return max;
         }
 
 
