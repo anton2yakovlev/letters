@@ -1,5 +1,6 @@
 public class Qwe {
     public static boolean correct(String s, int i) {
+        System.out.println(123);
         if (s.length()==0) {
             return (i==0);
         }
